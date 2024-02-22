@@ -1,5 +1,5 @@
 # plant_phenotyping_machine_learning_application
-a plant phenotyping machine learning with defacto implementation of three machine learning frameworks and allows for the scalable management of the plant pheotyping data and also for the selection of the traits and the machine learning classifiers. it will also allows for the cusotmization of the machine learning models.
+a plant phenotyping machine learning with defacto implementation of three machine learning frameworks and allows for the scalable management of the plant pheotyping data and also for the selection of the traits and the machine learning classifiers. it will also allows for the cusotmization of the machine learning models. select the traits for the machine learning and send to the deployment of the machine learning models. it will evaluate the KNN and will give you the ROC and the AUC values. I have not yet implement the SHAP and the positional SHAP to explain the models. 
 
 Gaurav Sablok \
 Academic Staff Member \

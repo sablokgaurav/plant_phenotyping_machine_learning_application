@@ -13,6 +13,8 @@ st.title("plant phenotyping and trait machine learning")
 st.header("this application uses the postgres as a backhand database")
 columns = st.sidebar.selectbox("the number of the variables present in the datasets",
 ("variable1", "variable2", "variable3", "variable4"))
+variable = st.sidebar.selectbox("the number of the variables present in the datasets",
+                                   ([f"variable{i}" for i in range(len(pd.columns))])) 
 Xdatasets = st.sidebar.selectbox("define the datasets for the machine learning X classification",
 ("variable1", "variable2", "variable3", "variable4"))
 plant_phenotype = st.file_uploader("please upload a plant phenotyping datasets")

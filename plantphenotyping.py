@@ -12,12 +12,13 @@ import pycaret as py
 
 st.title("plant phenotyping and trait machine learning")
 st.header("this application uses the postgres as a backhand database")
+variables = st.text_input("please input the number of the observed variables")
 columns = st.sidebar.selectbox("the number of the variables present in the datasets",
-("variable1", "variable2", "variable3", "variable4"))
+                                                    ("variable1", "variable2", "variable3", "variable4"))
 variable = st.sidebar.selectbox("the number of the variables present in the datasets",
-                                   ([f"variable{i}" for i in range(len(pd.columns))])) 
+                                                    ([f"variable{i}" for i in range(len(variables))])) 
 Xdatasets = st.sidebar.selectbox("define the datasets for the machine learning X classification",
-("variable1", "variable2", "variable3", "variable4"))
+                                                    ("variable1", "variable2", "variable3", "variable4"))
 readphenotype = pd.read_csv(plantphenotype, sep=",")
 lengthpheotype = len(readphenotype)
 number = st.sidebar.slider("Choose a number", min_value=0, max_value=lengthpheotype,)

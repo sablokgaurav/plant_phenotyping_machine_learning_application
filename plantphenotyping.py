@@ -17,8 +17,14 @@ variable = st.sidebar.selectbox("the number of the variables present in the data
                                    ([f"variable{i}" for i in range(len(pd.columns))])) 
 Xdatasets = st.sidebar.selectbox("define the datasets for the machine learning X classification",
 ("variable1", "variable2", "variable3", "variable4"))
-plant_phenotype = st.file_uploader("please upload a plant phenotyping datasets")
-
+readphenotype = pd.read_csv(plantphenotype, sep=",")
+lengthpheotype = len(readphenotype)
+number = st.sidebar.slider("Choose a number", min_value=0, max_value=lengthpheotype,)
+st.metric("Selected number", number)
+st.dataframe(readphenotype)
+st.download_button("data downloading after the phenotypic modifications",
+                          readphenotype.to_csv(index=False),
+                                      file_name="data.csv") 
 if plant_phenotype is not None:
 datasets = pd.read_csv(plant_phenotype, sep = ",")
 else:

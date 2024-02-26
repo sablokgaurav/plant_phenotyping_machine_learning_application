@@ -8,6 +8,7 @@ import os
 import logging
 import pandas as pd
 import sklearn as sk
+import pycaret as py
 
 st.title("plant phenotyping and trait machine learning")
 st.header("this application uses the postgres as a backhand database")

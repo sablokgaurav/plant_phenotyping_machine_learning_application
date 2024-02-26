@@ -2,10 +2,12 @@
 # Universitat Potsdam
 # Author Gaurav Sablok
 # date: 2024-2-23
+# adding the support for the multiple machine learning classification including a basic linear model using the stats.model
 # a streamlit application for the plant phenotyping and trait machine learning
 import streamlit as st
 import os
 import logging
+import stats.model
 import pandas as pd
 import sklearn as sk
 import pycaret as py
